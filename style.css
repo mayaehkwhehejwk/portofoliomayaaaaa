@@ -1,0 +1,184 @@
+
+/* MAYA SOPA - MAKEUP PORTFOLIO */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff7fa;
+  color: #49333d;
+  overflow-x: hidden;
+}
+
+/* Navigasi */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(190, 100, 140, 0.12);
+}
+
+nav a {
+  color: #a64d75;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #e879a5;
+}
+
+/* Judul */
+h1, h2, h3 {
+  color: #b85c83;
+}
+
+h1 {
+  font-size: clamp(30px, 5vw, 55px);
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Bagian halaman */
+section {
+  padding: 75px 8%;
+  scroll-margin-top: 80px;
+}
+
+/* Tombol */
+button,
+.btn {
+  background: #d9789e;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background: #b95780;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(185, 87, 128, 0.2);
+}
+
+/* Foto */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-img,
+.about-img {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(190, 100, 140, 0.15);
+}
+
+/* Kartu */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(190, 100, 140, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+/* Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+}
+
+/* Animasi */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  background: #f5d4e1;
+  color: #81435f;
+  text-align: center;
+  padding: 25px;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 50px 6%;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
